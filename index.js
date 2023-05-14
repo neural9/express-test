@@ -9,6 +9,11 @@ app.get('/health', (req, res) => {
   res.send('test response is working');
 });
 
+app.get('/repeat', (req, res) => {
+  res.send('Hi there: ' + req.query.name);
+});
+
+
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
